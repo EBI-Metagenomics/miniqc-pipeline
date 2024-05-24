@@ -21,8 +21,7 @@ process ALIGNMENT_DECONTAMINATION {
     script:
     def bam2fq_args = task.ext.bam2fq_args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
-    def samtools_args = task.ext.decontamination_args
-
+    def samtools_args = "-f 4 -F 256 -uS"
     """
     if [[ "${meta.single_end}" == "true" ]]; then
         bwa-mem2 \
