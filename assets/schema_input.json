@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/microbiome-informatics/miniqc-pipeline/main/assets/schema_input.json",
+    "title": "microbiome-informatics/miniqc-pipeline pipeline - params.input schema",
+    "description": "Schema for the file provided with params.input",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "errorMessage": "Prefix, used for the file names (raw reads accession)",
+          "meta": ["id"]
+        },
+        "fastq_1": {
+          "type": "string",
+          "pattern": "^\\S+\\.(fq.gz|fastq.gz)$",
+          "errorMessage": "The raw reads file needs to be a gzipped fastq file."
+        },
+        "fastq_2": {
+          "type": "string",
+          "pattern": "^\\S+\\.(fq.gz|fastq.gz)$",
+          "errorMessage": "The raw reads file needs to be a gzipped fastq file."
+        }
+      },
+      "required": ["id", "fastq_1"]
+    }
+  }
+  
