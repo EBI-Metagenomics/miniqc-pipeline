@@ -2,7 +2,7 @@ include { validateParameters; paramsHelp; paramsSummaryLog; samplesheetToList } 
 
 // Print help message, supply typical command line usage for the pipeline
 if (params.help) {
-   log.info paramsHelp("nextflow run ebi-metagenomics/miniqc-pipeline --input input_file.csv")
+   log.info paramsHelp("nextflow run ebi-metagenomics/miniqc-pipeline --samplesheet input_file.csv --ref_genome bwa-mem2-indexed.fasta")
    exit 0
 }
 
