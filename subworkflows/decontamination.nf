@@ -3,7 +3,7 @@
      Run subworkflow
     ~~~~~~~~~~~~~~~~~~
 */
-include { ALIGNMENT_DECONTAMINATION    } from '../modules/align_bwa'
+include { ALIGNMENT_DECONTAMINATION } from '../modules/align_bwamem2'
 
 workflow DECONTAMINATION {
     take:
