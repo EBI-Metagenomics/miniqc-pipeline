@@ -7,13 +7,17 @@ nextflow_pipeline {
 
         when {
             params {
-                // define parameters here. Example: 
-                // outdir = "tests/results"
+                samplesheet = "$projectDir/tests/test_samplesheet.csv" // These are downloaded from github (the main branch)
+                ref_genome  = "$projectDir/tests/test_data/ERZ857996.fasta"
+                outdir = "tests/results"
             }
         }
 
         then {
-            assert workflow.success
+            with(workflow) {
+                assert success
+                assert trace.tasks().size() == 6
+            }
         }
 
     }

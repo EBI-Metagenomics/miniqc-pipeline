@@ -4,15 +4,6 @@ This pipeline performs quality control (QC) on raw metagenomics reads and decont
 
 The code was taken from the [EMBL EBI's Microbiome Informatics team](https://www.ebi.ac.uk/about/teams/microbiome-informatics) [MAGs generation pipeline](https://github.com/EBI-Metagenomics/genomes-generation)
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Parameters](#parameters)
-5. [Output](#output)
-6. [Support](#support)
-7. [License](#license)
-
 ## Introduction
 
 The Metagenomics Reads QC and Decontamination Pipeline is designed to preprocess metagenomic sequencing data by performing quality control and removing contaminant sequences based on a reference genome. The key steps in the pipeline are:
@@ -33,6 +24,23 @@ To run this pipeline, you need to have Nextflow installed. Additionally, Docker 
 
 ## Usage
 
+### Input
+
+The pipeline requires 2 parameters: a samplesheet and a BWA-MEM2 indexed reference genome.
+
+#### Samplesheet
+
+The samplesheet should look like this:
+
+```csv
+id,fastq_1,fastq_2
+test,/path/to/fastq_1.fastq,
+```
+
+It supports paired and single ends. For single ends, leave the third column (fastq_2) empty.
+
+### Execution
+
 ```
 $ nextflow run ebi-metagenomics/miniqc-pipeline
  N E X T F L O W   ~  version 24.04.1
@@ -41,7 +49,7 @@ Launching `main.nf` [hungry_keller] DSL2 - revision: 7a31cd92ec
 
 Typical pipeline command:
 
-  nextflow run ebi-metagenomics/miniqc-pipeline --input input_file.csv
+  nextflow run ebi-metagenomics/miniqc-pipeline --samplesheet input_file.csv --ref_genome reference.fasta
 
 Input/output options
   --samplesheet                 [string]  Path to comma-separated file containing information about the assemblies, raw reads with the prefix to be 

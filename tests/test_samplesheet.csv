@@ -1,2 +1,2 @@
 id,fastq_1,fastq_2
-test,/home/mbc/projects/ebi-metagenomics-reads-qc/tests/test_data/reads_1.fastq.gz,/home/mbc/projects/ebi-metagenomics-reads-qc/tests/test_data/reads_2.fastq.gz
+test,https://github.com/EBI-Metagenomics/miniqc-pipeline/raw/main/tests/test_data/reads_1.fastq.gz,https://github.com/EBI-Metagenomics/miniqc-pipeline/raw/main/tests/test_data/reads_2.fastq.gz

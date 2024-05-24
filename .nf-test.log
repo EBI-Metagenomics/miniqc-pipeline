@@ -1,0 +1,15 @@
+May-24 14:44:51.945 [main] INFO  com.askimed.nf.test.App - nf-test 0.8.4
+May-24 14:44:51.960 [main] INFO  com.askimed.nf.test.App - Arguments: [test]
+May-24 14:44:52.947 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 24.04.1
+May-24 14:44:52.949 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /home/mbc/projects/ebi-metagenomics-miniqc-pipeline/nf-test.config...
+May-24 14:44:53.328 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Detected 1 test files.
+May-24 14:44:53.567 [main] WARN  com.askimed.nf.test.config.FileStaging - File '/home/mbc/projects/ebi-metagenomics-miniqc-pipeline/bin' not found. Ignore it.
+May-24 14:44:53.567 [main] WARN  com.askimed.nf.test.config.FileStaging - File '/home/mbc/projects/ebi-metagenomics-miniqc-pipeline/lib' not found. Ignore it.
+May-24 14:44:53.567 [main] INFO  com.askimed.nf.test.config.FileStaging - Copy directory '/home/mbc/projects/ebi-metagenomics-miniqc-pipeline/assets' to '/home/mbc/projects/ebi-metagenomics-miniqc-pipeline/.nf-test/tests/f653a3581e0994a6c27f9fe69be9d39f/meta/assets'
+May-24 14:44:53.568 [main] DEBUG com.askimed.nf.test.core.AbstractTest - Stage 0 user provided files...
+May-24 14:44:53.574 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
+May-24 14:44:53.574 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/home/mbc/projects/ebi-metagenomics-miniqc-pipeline/tests/main.nf.test'.
+May-24 14:44:53.574 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'f653a358: Should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+May-24 14:45:17.926 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'f653a358: Should run without failures' finished. status: PASSED
+May-24 14:45:17.935 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow main.nf' finished. snapshot file: false, skipped tests: false, failed tests: false
+May-24 14:45:17.935 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Executed 1 tests. 0 tests failed. Done!
